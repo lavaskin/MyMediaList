@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MML: {{page}}</title>
+
+		{{!-- Custom CSS/JS --}}
+        <link rel="stylesheet" href="/style.css">
+		<script src="/js/index.js"></script>
+		<script src="/js/interactions.js"></script>
+		<script src="/js/post.js"></script>
+		<script src="/js/client.js"></script>
+
+		{{!-- External SRC --}}
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/5b6336ae11.js"></script>
+		
+		{{!-- Handlebars --}}
+		<script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars.min-latest.js"></script>
+    </head>
+
+    <body>
+        {{> navbar}}
+
+		{{!-- Flash Messages --}}
+		{{> messages}}
+
+        {{{body}}}
+    </body>
+</html>

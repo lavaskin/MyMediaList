@@ -1,0 +1,22 @@
+{{!-- This needs to implement a for loop for our database --}}
+<article class="post general-container">
+	<div class="post-content">
+		{{postContent}}
+	</div>
+
+	<hr />
+
+	<ul class="post-subjects-container" title="Media items relating to the post.">
+		{{#each subjects}}
+			{{> subject}}
+		{{/each}}
+	</ul>
+
+	<hr />
+
+	<div class="post-timestamp">{{timestamp}}</div>
+	{{#if auth}}
+		<button class="remove-post-btn empty-btn"><i class="fas fa-trash"></i></button>
+	{{/if}}
+	<div class="hidden">{{postID}}</div>
+</article>

@@ -1,0 +1,23 @@
+<article class="media-container general-container hidden">
+	<div class="media-title" title="See posts relating to this media item."><a href="/user/{{owner}}/posts/{{id}}">{{title}}</a></div>
+	<div class="media-creator">{{creator}}</div>
+	<div class="media-type">{{type}}</div>
+
+	<div class="media-score" title="Out of 10.">
+		<button class="score-btn">Score: {{score}}</button>
+		{{#if auth}}
+			<div class="new-score-container hidden">
+				<input class="score-input" type="text" placeholder="New Score">
+				<button class="accept-new-score-btn general-btn">Change</button>
+				<button class="cancel-new-score-btn general-btn">X</button>
+			</div>
+		{{/if}}
+	</div>
+	
+	{{#if auth}}
+		<button class="media-progress">{{progress}}</button>
+		<button class="remove-item-btn empty-btn"><i class="fas fa-trash"></i></button>
+	{{else}}
+		<div class="media-progress">{{progress}}</div>
+	{{/if}}
+</article>

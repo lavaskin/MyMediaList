@@ -1,0 +1,25 @@
+<main class="body">
+	<div class="list-page-header">
+		<div id="list-title-container">
+			<div id="list-title">All of your created Media</div>
+		</div>
+		
+		<a id="list-author" href="/user/{{page}}">Return to your page</a>
+	</div>
+
+	<div id="filters-bar">
+		<div class="filter-label filter-item">Filters:</div>
+		<button class="filter-item general-btn">By Name</button>
+		<button class="filter-item general-btn">By Score</button>
+	</div>
+
+	<hr class="media-page-hr">
+
+	<div id="media-list-container">
+		{{!-- Post every media item --}}
+		{{#each items}}
+			{{> media auth=true}}
+		{{/each}}
+	</div>
+</main>
+<div id="auth" class="hidden">{{auth}}</div>

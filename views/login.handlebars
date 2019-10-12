@@ -1,0 +1,19 @@
+<main class="body">
+	{{#if error_msg}}
+		{{error_msg}}
+	{{/if}}
+
+	<div id="form-container">
+		<form action="/login" method="POST">
+			<div class="form-header">Username</div>
+			<input id="username" name="username" class="form-input" type="text" value="{{username}}">
+
+			<div class="form-header">Password</div>
+			<input id="password" name="password" class="form-input" type="password">
+
+			<br>
+
+			<button id="submit-btn" class="general-btn" type="submit">{{page}}</button>
+		</form>
+	</div>
+</main>

@@ -1,0 +1,32 @@
+<main class="body">
+	<div class="list-page-header">
+		<div id="list-title-container">
+			<div id="list-title">{{listName}}</div>
+			{{#if auth}}
+				<div class="edit-name-btn"><i class="fas fa-pencil-alt"></i></div>
+				<div class="new-list-name-container hidden">
+					<input class="name-input" type="text" min="1" max="32" placeholder=" New Name">
+					<button class="accept-new-name-btn general-btn">Change</button>
+					<button class="cancel-new-name-btn general-btn">X</button>
+				</div>
+			{{/if}}
+		</div>
+		
+		<a id="list-author" href="/user/{{page}}">By: {{page}}</a>
+	</div>
+	
+	<div id="media-list-container">
+		{{!-- Post every media item in the list --}}
+		{{#each items}}
+			{{> media auth=../auth}}
+		{{/each}}
+	</div>
+
+	{{#if auth}}
+		{{> mediaCreator}}
+		
+		<button id="delete-list-btn" class="general-btn">Delete List</button>
+		<button id="add-media-btn" class="general-btn">Add Item</button>
+	{{/if}}
+</main>
+<div id="auth" class="hidden">{{auth}}</div>

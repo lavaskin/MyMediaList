@@ -1,0 +1,18 @@
+<div id="postcrt-container" class="general-container hidden">
+	<div class="postcrt-prompt">Enter your post:</div>
+	<textarea id="postcrt-content" placeholder="2000 characters maximum." cols="30"></textarea>
+
+	<div class="postcrt-prompt">Attach Subjects:</div>
+	<div class="addable-media-container">
+		{{#each media}}
+			{{> addableMedia}}
+		{{/each}}
+	</div>
+	
+	<div id="postcrt-btn-container">
+		<button id="create-post-btn" class="general-btn">Post</button>
+		<button id="cancel-post-btn" class="general-btn">Cancel</button>
+	</div>
+</div>
+
+<button id="new-post-btn" class="general-btn">New Post</button>

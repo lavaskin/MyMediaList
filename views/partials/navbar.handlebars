@@ -1,0 +1,23 @@
+<nav id="nav-bar">
+    <ul id="nav-list">
+		<li class="nav-item title"><a href="/">MyMediaList</a></li>
+
+		{{#if loggedIn}}
+			<li class="nav-item sign"><a href="/logout">Logout</a></li>
+			<li class="nav-item sign logged-in"><a href="/user/{{user}}">{{user}}</a></li>
+		{{else}}
+			<li class="nav-item sign"><a href="/signup">Sign-Up</a></li>
+			<li class="nav-item sign"><a href="/login">Login</a></li>
+		{{/if}}
+
+		{{#if noSearch}} {{else}}
+			<li class="nav-item nav-btn-container">
+				<input id="nav-search-btn" class="go-btn" type="submit" value="Go">
+			</li>
+
+			<li class="nav-item nav-searchbar">
+				<input id="nav-search-input" class="user-search" type="text" placeholder="Find a user...">
+			</li>
+		{{/if}}
+	</ul>
+</nav>

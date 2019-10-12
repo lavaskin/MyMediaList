@@ -1,0 +1,39 @@
+<main class="body">
+	{{#if fullPage}}
+		<div class="sub-header">{{page}}'s Page</div>
+	{{else}}
+		<div class="sub-header"><a href="/user/{{page}}">Back to {{page}}'s Page</a></div>
+	{{/if}}
+
+	<div id="user-content">
+		<div class="post-container">
+			{{#if fullPage}}{{#if auth}}
+				{{> postCreator}}
+			{{/if}}{{/if}}
+				
+			{{!-- Display all the users posts --}}
+			{{#each posts}}
+				{{> post auth=../auth}}
+			{{/each}}
+		</div>
+
+		{{#if fullPage}}
+			<div class="list-container"> 
+				<div class="lists-header">Created Lists</div>
+
+				{{#if auth}}
+					{{> listCreator}}
+				{{/if}}
+
+				{{!-- Display all the user's lists --}}
+				<ul class="listx2">
+					{{#each lists}}
+						{{> list}}
+					{{/each}}
+					{{#if auth}}<li class="listx3 all-media"><a href="/user/{{page}}/media">All Media</a></li>{{/if}}
+				</ul>
+			</div>
+		{{/if}}
+	</div>
+</main>
+<div id="auth" class="hidden">{{auth}}</div>

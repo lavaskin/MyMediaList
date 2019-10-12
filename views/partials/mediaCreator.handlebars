@@ -1,0 +1,34 @@
+<div id="media-creator-container" class="general-container hidden">
+	<button class="general-btn selection-btn">Make New Media</button>
+	<button class="general-btn selection-btn">Add Existing Media</button>
+	
+	<div id="new-media-creator" class="hidden">
+		<input class="media-input creator-item" type="text" placeholder=" Title">
+		<input class="media-input creator-item" type="text" placeholder=" Creator">
+		<input class="media-input creator-item" type="text" placeholder=" Score (1 → 10)">
+		<button class="finished-btn general-btn" title="This piece of media is a work in-progress.">Finished?</button>
+
+		{{!-- Radio Buttons --}}
+		<form>
+			<div class="creator-item type-header">What type of Media is it?</div>
+			<input class="creator-item radio" type="radio" name="type" value="Book">Book   <br />
+			<input class="creator-item radio" type="radio" name="type" value="Show">Show   <br />
+			<input class="creator-item radio" type="radio" name="type" value="Movie">Movie <br />
+			<input class="creator-item radio" type="radio" name="type" value="Game">Game   <br />
+			<input class="creator-item radio" type="radio" name="type" value="Comic">Comic <br />
+		</form>
+	</div>
+
+	<div id="existing-media-container" class="hidden">
+		<div id="exist-selection" class="addable-media-container hidden">
+			{{#each media}}
+				{{> addableMedia}}
+			{{/each}}
+		</div>
+	</div>
+	
+	<div id="form-btns" class="hidden">
+		<button id="cancel-btn" class="general-btn">Cancel</button>
+		<button id="confirm-media-btn" class="general-btn">Add Media</button>
+	</div>
+</div>

@@ -1,0 +1,13 @@
+{{#if error}}
+	<div class="flash-container">
+		<div class="flash-text">{{error}}</div>
+		<button class="close-btn empty-btn"><span aria-hidden="true">&times;</span></button>
+	</div>
+{{/if}}
+
+{{#if error_msg}}
+	<div class="flash-container">
+		<div class="flash-text">{{error_msg}}</div>
+		<button class="close-btn empty-btn"><span aria-hidden="true">&times;</span></button>
+	</div>
+{{/if}}

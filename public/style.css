@@ -1,0 +1,739 @@
+/* General */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+
+	/* Variables */
+	--dark1: #212121;
+	--dark2: #313131;
+	--dark3: #414141;
+}
+
+body {
+	background-color: var(--dark1);
+	color: white;
+}
+
+.body {
+	padding: 25px;
+}
+
+.hidden {
+	display: none;
+}
+
+.general-container {
+	position: relative;
+	padding: 10px;
+	background-color: var(--dark2);
+	border: 1px solid var(--dark2);
+	border-radius: 3px;
+	box-shadow: 5px 5px 15px black;
+	margin-bottom: 15px;
+}
+
+.general-btn {
+	border-radius: 3px;
+	background-color: var(--dark2);
+	border: 1px solid var(--dark2);
+	transition: 0.2s;
+	color: white;
+	font-size: 1.1em;
+	padding: 3px;
+	cursor: pointer;
+}
+
+.empty-btn {
+	background: none;
+	border: none;
+}
+
+.general-btn:hover {
+	color: red;
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+	color: white;
+	transition: 0.2s;
+}
+
+a:hover {
+	color: red;
+	transition: 0.2s;
+}
+
+ul {
+	list-style-type: none;
+}
+
+hr {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+i {
+	color: white;
+	transition: 0.2s;
+}
+
+i:hover {
+	color: red;
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+@keyframes fadeout {
+	from { opacity: 1; }
+	to   { opacity: 0; }
+}
+
+
+/* Flash Message */
+.flash-container {
+	position: relative;
+	border: 3px solid darkred;
+	border-radius: 8px;
+	background-color: rgba(255, 0, 0, 0.4);
+	max-width: 40%;
+	padding: 10px;
+	opacity: 40%;
+	margin: auto;
+	top: 25px;
+	box-shadow: 5px 5px 10px black;
+}
+
+.flash-text {
+	color: black;
+	font-size: 1.1em;
+	display: inline-block;
+}
+
+.flash-text {
+	cursor: not-allowed;
+}
+
+.close-btn {
+	float: right;
+	font-size: 1.1em;
+}
+
+.close-btn:hover {
+	cursor: pointer;
+}
+
+.close-btn:focus {
+	outline: none;
+}
+
+
+/* Font Awesome Edits */
+.fa-trash {
+	font-size: 1.2em;
+	color: white;
+	transition: 0.2s;
+}
+
+.fa-trash:hover {
+	color: red;
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+
+/* Navbar */
+#nav-list {
+	background-color: var(--dark2);
+	overflow: hidden;
+	box-shadow: 0 0 10px black;
+}
+
+.nav-item {
+	display: inline-block;
+	text-align: center;
+	line-height: 28px;
+	padding: 15px 5px;
+}
+
+.sign,
+.nav-searchbar,
+.nav-btn-container {
+	float: right;
+}
+
+.nav-item a {
+	font-size: 1.25em;
+}
+
+#nav-search-input {
+	background-color: var(--dark1);
+	border: 1px solid var(--dark1);
+	border-radius: 3px;
+	font-size: 1.26em;
+	color: var(--dark3);
+} 
+
+#nav-search-input:focus {
+	background-color: var(--dark3);
+	border: 1px solid var(--dark3);
+	color: black;
+}
+
+.nav-btn-container {
+	padding-right: 25px;
+}
+
+.title {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#nav-search-btn {
+	position: relative;
+	font-size: 1em;
+	padding: 1px 4px 2px 4px;
+	right: 8px;
+	border: 2px solid var(--dark1);
+	border-radius: 3px;
+	background-color: var(--dark1);
+	color: white;
+}
+
+#nav-search-btn:hover {
+	color: red;
+}
+
+.sign:hover,
+.title:hover {
+	background-color: var(--dark1);
+}
+
+
+/* Homepage */
+#home-container {
+	font-size: 3em;
+	position: absolute;
+	/* Center Everything */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	align-items: center;
+}
+
+.home-list-item {
+	display: inline-block;
+}
+
+#home-searchbar {
+	font-size: 1.01em;
+	background-color: var(--dark2);
+	border: 1px solid var(--dark2);
+	color: var(--dark1);
+	box-shadow: 0 0 20px black;
+	border-radius: 3px;
+	transition: 0.2s;
+}
+
+#home-searchbar:focus {
+	background-color: var(--dark3);
+	border: 1px solid var(--dark3);
+	box-shadow: 0 0 40px black;
+	transition: 0.2s;
+}
+
+#home-go-btn {
+	position: relative;
+	font-size: 0.9em;
+	padding: 2px 4px;
+	border: 2px solid var(--dark2);
+	background-color: var(--dark2);
+	color: white;
+	right: 7px;
+	bottom: 2px;
+	box-shadow: 0 0 15px black;
+	border-radius: 3px;
+	transition: 0.2s;
+}
+
+#home-go-btn:hover {
+	border-radius: 10px;
+	color: red;
+	transition: 0.2s;
+}
+
+
+/* User Page */
+.sub-header {
+	font-size: 2.5em;
+	margin-bottom: 20px;
+}
+
+#user-content {
+	margin: 10px;
+	width: 100%;
+}
+
+.post-container {
+	width: 60%;
+	height: 100%;
+	float: left;
+}
+
+#new-post-btn {
+	margin-bottom: 15px;
+}
+
+#new-list-btn {
+	margin-bottom: 10px;
+}
+
+.post-content {
+	padding-bottom: 1px;
+	word-wrap: break-word;
+}
+
+.post-subject {
+	font-style: italic;
+	font-size: 0.95em;
+}
+
+.list-container {
+	width: 30%;
+	height: 100%;
+	float: right;
+	text-align: right;
+}
+
+.lists-header {
+	font-size: 1.5em;
+	text-decoration: underline;
+	margin-bottom: 10px;
+}
+
+.postcrt-prompt {
+	margin-bottom: 5px;
+}
+
+#postcrt-content {
+	width: 100%;
+	height: 8em;
+	background-color: var(--dark1);
+	border: 1px solid var(--dark1);
+	border-radius: 3px;
+	color: white;
+	margin-bottom: 10px;
+}
+
+#postcrt-btn-container {
+	margin-top: 15px;
+}
+
+#create-post-btn,
+#cancel-post-btn {
+	background-color: var(--dark1);
+	border: 1px solid var(--dark1);
+}
+
+#cancel-post-btn {
+	float: right;
+}
+
+.addable-media-container {
+	overflow: scroll;
+	height: 6em;
+	border: 1px solid var(--dark1);
+	border-radius: 3px;
+	background-color: var(--dark1);
+	padding: 5px;
+	display: inherit;
+}
+
+.addable-media {
+	display: inline;
+}
+
+.checkbox-text {
+	/* This is dumb, but I can't get them to display inline without it breaking */
+	position: relative;
+	bottom: 1.35em;
+	left: 1em;
+	margin-bottom: -1.2em;
+}
+
+#new-list-name {
+	position: relative;
+	float: left;
+	top: 5px;
+	background-color: var(--dark1);
+	border: 1px solid var(--dark1);
+	border-radius: 3px;
+	font-size: 1em;
+	color: var(--dark3);
+}
+
+#new-list-name:focus {
+	background-color: var(--dark3);
+	border: 1px solid var(--dark3);
+	color: black;
+}
+
+#create-list-btn,
+#cancel-list-btn {
+	background-color: var(--dark1);
+	border: 1px solid var(--dark1);
+}
+
+.remove-post-btn {
+	position: absolute;
+	right: 12px;
+	bottom: 10px;
+	display: none;
+}
+
+.post:hover .remove-post-btn {
+	display: block;
+}
+
+.remove-post-btn:focus {
+	outline: none;
+}
+
+.all-media {
+	font-style: italic;
+	margin-top: 5px;
+}
+
+.all-media a:hover {
+	color: gold;
+	transition: 0.2s;
+}
+
+
+/* Lists Page */
+.list-page-header {
+	margin-bottom: 25px;
+}
+
+#list-title-container {
+	position: relative;
+}
+
+#list-title {
+	font-size: 3em;
+	display: inline-block;
+}
+
+.edit-name-btn {
+	display: none;
+	position: absolute;
+	top: 17px;
+	margin-left: 20px;
+	font-size: 1.3em;
+}
+
+#list-title-container:hover .edit-name-btn {
+	display: inline-block;
+}
+
+.new-list-name-container {
+	height: 3.65em; /* So that the list-title and form area are consistent */
+}
+
+#list-author {
+	font-size: 2em;
+}
+
+.media-title {
+	font-size: 1.1em;
+	margin-bottom: 10px;
+	text-decoration: underline;
+}
+
+.media-progress {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	border: none;
+	background-color: var(--dark2);
+	color: white;
+}
+
+.media-score {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.remove-item-btn {
+	position: absolute;
+	right: 35px;
+	bottom: 10px;
+	display: none;
+	transition: 0.2;
+}
+
+.remove-item-btn:focus {
+	outline: none;
+}
+
+.media-container:hover .remove-item-btn {
+	display: block;
+	transition: 0.2;
+}
+
+.score-btn {
+	border: none;
+	background-color: var(--dark2);
+	font-size: 1em;
+}
+
+.score-btn:hover,
+.media-progress:hover {
+	cursor: pointer;
+}
+
+.score-input {
+	background-color: var(--dark1);
+	border: 1px solid var(--dark1);
+	border-radius: 3px;
+	color: var(--dark3);
+	font-size: 1em;
+	width: 6em;
+	line-height: 1.5em;
+}
+
+.score-input:focus {
+	background-color: var(--dark3);
+	border: 1px solid var(--dark3);
+	color: black;
+}
+
+.cancel-new-score-btn {
+	width: 1.5em;
+	color: darkred;
+}
+
+.accept-new-score-btn,
+.cancel-new-score-btn {
+	background-color: var(--dark1);
+	border: 1px solid var(--dark1);
+	font-size: 0.9em;
+}
+
+#add-media-btn,
+#delete-list-btn {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	font-size: 1.2em;
+	line-height: 2em;
+	border-radius: 8px;
+	padding: 8px;
+	box-shadow: 4px 4px 7px black;
+}
+
+#add-media-btn:hover,
+#add-media-btn:focus,
+#delete-list-btn:hover,
+#delete-list-btn:focus {
+	color: red;
+	border-radius: 15px;
+	transition: 0.2s;
+	box-shadow: 2px 2px 5px black;
+}
+
+#add-media-btn {
+	bottom: 100px;
+}
+
+.media-container {
+	width: 45%;
+	margin-bottom: 15px;
+}
+
+#media-creator-container {
+	border-radius: 10px;
+	padding-right: 5px;
+	margin-bottom: 0;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	width: 30em;
+}
+
+#exist-selection {
+	height: 75%;
+	margin-right: 5px;
+}
+
+#confirm-media-btn {
+	position: relative;
+	float: right;
+	right: 5px;
+}
+
+#cancel-btn,
+#confirm-media-btn {
+	margin-top: 15px;
+	background-color: var(--dark1);
+	border: 1px solid var(--dark1);
+}
+
+.selection-btn {
+	width: 49%;
+	line-height: 2em;
+	background-color: var(--dark1);
+	border: 1px solid var(--dark1);
+	border-radius: 10px;
+	font-size: 2em;
+}
+
+.creator-item {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.type-header {
+	text-decoration: underline;
+	margin-top: 10px;
+}
+
+.radio {
+	display: inline;
+}
+
+.media-input {
+	background-color: var(--dark1);
+	border: 1px solid var(--dark1);
+	border-radius: 3px;
+	font-size: 1em;
+	color: var(--dark3);
+	width: 99%;
+}
+
+.media-input:focus {
+	background-color: var(--dark3);
+	border: 1px solid var(--dark3);
+	color: black;
+}
+
+.finished-btn {
+	position: relative;
+	background-color: var(--dark1);
+	border: 1px solid var(--dark1);
+	margin-bottom: 10px;
+	left: 40%;
+	width: 6em;
+}
+
+.name-input {
+	background-color: var(--dark2);
+	border: 1px solid var(--dark2);
+	font-size: 2em;
+	color: var(--dark1);
+}
+
+.name-input:focus {
+	background-color: var(--dark3);
+	color: black;
+}
+
+.accept-new-name-btn,
+.cancel-new-name-btn {
+	position: relative;
+	font-size: 1.7em;
+	top: -2px;
+}
+
+.cancel-new-name-btn {
+	color: darkred;
+}
+
+
+/* Login/Register Pages */
+#form-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	align-items: center;
+}
+
+.form-header {
+	text-align: center;
+	font-size: 1.7em;
+}
+
+.form-input {
+	font-size: 1.5em;
+	text-align: center;
+	margin-bottom: 15px;
+	margin-top: 5px;
+	background-color: var(--dark2);
+	border: 1px solid var(--dark2);
+	border-radius: 4px;
+	box-shadow: 5px 5px 15px black;
+	color: black;
+}
+
+.form-input:focus {
+	background-color: var(--dark3);
+	color: white;
+}
+
+#submit-btn {
+	position: relative;
+	font-size: 1.5em;
+	align-self: center;
+	left: 37%;
+	box-shadow: 4px 3px 15px black;
+}
+
+.signup-btn {
+	/* Center it really jankily */
+	left: 34% !important;
+}
+
+
+/* 404 Page */
+#not-found-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	align-items: center;
+}
+
+#code-text {
+	text-align: center;
+	font-size: 10em;
+}
+
+#redirect-text {
+	text-align: center;
+	font-style: italic;
+}
+
+
+/* Media Page */
+.filter-item {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.filter-label {
+	font-size: 1.3em;
+}
+
+.media-page-hr {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 46.5%;
+}
