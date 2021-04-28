@@ -11,3 +11,5 @@ Place it into the "src" directory.
 Run the command "npm install" to download every dependency.\
 Run the command "npm start". \
 Access the site through your browser using "localhost:port".
+
+Originally a school project by myself and github.com/roquej
