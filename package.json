@@ -1,7 +1,7 @@
 {
   "name": "mymedialist",
   "version": "1.0.0",
-  "description": "Simple media tracking website. For CS340 @ OSU.",
+  "description": "Simple media tracking website.",
   "main": "app.js",
   "dependencies": {
     "bcrypt": "^3.0.8",
@@ -22,12 +22,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggersja/MyMediaList.git"
+    "url": "git+https://github.com/lavaskin/MyMediaList.git"
   },
   "author": "lavaskin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/eggersja/MyMediaList/issues"
+    "url": "https://github.com/lavaskin/MyMediaList/issues"
   },
-  "homepage": "https://github.com/eggersja/MyMediaList#readme"
+  "homepage": "https://github.com/lavaskin/MyMediaList#readme"
 }
